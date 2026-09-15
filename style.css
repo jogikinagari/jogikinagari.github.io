@@ -1,0 +1,58 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+Gujarati:wght@400;500;600;700;800&display=swap');
+
+:root{
+  --maroon:#72180f; --red:#a72d17; --gold:#c9962b; --cream:#fff8ec;
+  --ink:#35170d; --white:#fff; --shadow:0 14px 35px rgba(75,32,10,.12);
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;font-family:"Noto Sans Gujarati",system-ui,sans-serif;color:var(--ink);background:var(--cream);line-height:1.75}
+a{color:inherit}
+.container{width:min(1120px,92%);margin:auto}
+.topbar{background:#4e1009;color:#fff;text-align:center;padding:7px 12px;font-size:.9rem}
+header{position:sticky;top:0;z-index:20;background:rgba(255,248,236,.96);backdrop-filter:blur(10px);border-bottom:1px solid #ead6b4}
+.nav{min-height:74px;display:flex;align-items:center;justify-content:space-between;gap:20px}
+.brand{display:flex;align-items:center;gap:12px;text-decoration:none;font-weight:800;color:var(--maroon)}
+.brand-mark{width:48px;height:48px;border-radius:50%;object-fit:cover;border:2px solid var(--gold)}
+.brand small{display:block;font-weight:500;color:#81513a;font-size:.72rem}
+nav{display:flex;gap:18px;flex-wrap:wrap;justify-content:flex-end}
+nav a{text-decoration:none;font-weight:600;color:#5b2716}
+nav a:hover{color:var(--red)}
+.hero{min-height:600px;display:grid;place-items:center;position:relative;overflow:hidden;background:linear-gradient(135deg,#5b1009,#9d2815 55%,#5b1009)}
+.hero::before{content:"";position:absolute;inset:0;background:linear-gradient(90deg,rgba(35,6,3,.82),rgba(35,6,3,.38)),url("images/mandir-1.jpg") center/cover;filter:saturate(1.05)}
+.hero-content{position:relative;color:#fff;text-align:center;padding:80px 20px;max-width:850px}
+.badge{display:inline-block;border:1px solid rgba(255,220,150,.7);padding:6px 16px;border-radius:999px;color:#ffe3a3;background:rgba(0,0,0,.18)}
+.hero h1{font-size:clamp(2.4rem,7vw,5rem);line-height:1.1;margin:18px 0 12px}
+.hero p{font-size:clamp(1rem,2.5vw,1.35rem);margin:0 auto 28px;max-width:720px}
+.btns{display:flex;gap:12px;justify-content:center;flex-wrap:wrap}
+.btn{display:inline-block;text-decoration:none;padding:12px 22px;border-radius:10px;font-weight:800}
+.btn-primary{background:var(--gold);color:#2e1608}
+.btn-light{background:#fff;color:var(--maroon)}
+section{padding:72px 0}
+.section-title{text-align:center;margin:0 0 34px}
+.section-title span{color:var(--gold);font-weight:800}
+.section-title h2{margin:4px 0;font-size:clamp(1.8rem,4vw,2.7rem);color:var(--maroon)}
+.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+.card{background:#fff;border:1px solid #eedcbe;border-radius:18px;padding:26px;box-shadow:var(--shadow)}
+.card h3{color:var(--maroon);margin-top:0}
+.feature-img{width:100%;height:260px;object-fit:cover;border-radius:14px}
+.quote{background:#fff0d1;border-left:5px solid var(--gold);padding:22px;border-radius:12px;margin-top:24px}
+.event{display:flex;gap:18px;align-items:flex-start}
+.event-icon{min-width:54px;height:54px;border-radius:14px;display:grid;place-items:center;background:#fff0d1;font-size:1.5rem}
+.gallery{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+.gallery img{width:100%;height:280px;object-fit:cover;border-radius:16px;box-shadow:var(--shadow)}
+.contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:28px}
+.info-row{padding:14px 0;border-bottom:1px solid #efdfc4}
+.info-row strong{display:block;color:var(--maroon)}
+.map{width:100%;min-height:280px;border:0;border-radius:16px;margin-top:18px}
+form{display:grid;gap:14px}
+label{font-weight:700}
+input,textarea{width:100%;padding:13px 14px;border:1px solid #ddc9a6;border-radius:10px;font:inherit;background:#fffdf9}
+textarea{min-height:140px;resize:vertical}
+footer{background:#4e1009;color:#fff;padding:34px 0;text-align:center}
+.footer-links{display:flex;justify-content:center;gap:18px;flex-wrap:wrap;margin-top:10px}
+.footer-links a{color:#ffe2a1;text-decoration:none}
+.note{font-size:.9rem;color:#765441}
+@media(max-width:850px){.grid,.gallery,.contact-grid{grid-template-columns:1fr 1fr}nav{gap:10px;font-size:.9rem}}
+@media(max-width:620px){.nav{align-items:flex-start;padding:12px 0}.nav nav{display:none}.grid,.gallery,.contact-grid{grid-template-columns:1fr}.hero{min-height:560px}.gallery img{height:260px}}
